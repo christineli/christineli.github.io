@@ -15,33 +15,10 @@ var html = '<!DOCTYPE html><html lang="en">'
                 + '<img class="signature" src="signature.png" alt="signature">' 
             + '</div><div class="img-container">'
 
-// fs.readdirSync(folder, function(err, files) {
-//     if(err) {
-//         console.error("Could not list the directory.", err);
-//         process.exit(1);
-//     } 
-//     files.forEach(function(file, index) {
-//         if (file.slice(-4) == ".jpg") {
-//             year = file.split('_')[0];
-//             month = months[file.split('_')[1]-1];
-//             day = file.split('_')[2];
-//             if (day[0] == "0") {
-//                 day = day[1];
-//             }
-//             place = file.split('_')[3].split('.')[0];
-//             html = html + '<div class="flip-card"> <div class="flipper">'
-//             + '<div class="front" id=' + file + '><img class="main-image" src="' + folder + file + '"></div>'
-//             + '<div class="back" id=' + file + '> <img class="main-image" src="' + folder + file + '">'
-//             + '<div class="back-description"> <h1>' + place +'</h1>'
-//             + '<h2>' + month + ' ' + day + ", " + year + '</h2></div></div></div></div>';        
-//         }
-//     });
-//     html = html + '</div></body></html>';
-// });
-
 files = fs.readdirSync(folder);
+var length = files.length;
 for (i in files) {
-    file = files[i];
+    file = files[length-i-1];
     if (file.slice(-4) == ".jpg") {
         year = file.split('_')[0];
         month = months[file.split('_')[1]-1];
