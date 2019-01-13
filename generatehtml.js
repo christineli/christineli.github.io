@@ -11,7 +11,7 @@ var html = '<!DOCTYPE html>\n<html lang="en">'
             + '\n</head>'
             + '\n<body>'
             + '\n<div class="header-container">'
-                + '\n\t<h1 class="title">tingting\'s travels</h1>'
+                + '\n\t<h1 class="title">christine\'s adventures</h1>'
                 + '\n\t<img class="signature" src="signature.png" alt="signature">' 
             + '\n</div>\n<div class="img-container">'
 
