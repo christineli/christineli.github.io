@@ -1,122 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132386018-1"></script>
-	<script>
-		 window.dataLayer = window.dataLayer || [];
-		 function gtag(){dataLayer.push(arguments);}
-		 gtag('js', new Date());
 
-		 gtag('config', 'UA-132386018-1');
-	 </script>
-	<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two" rel="stylesheet">
-	<link rel="stylesheet" href="style.css">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> 
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="opentab.js"></script>  
 </head>
+
 <body>
-<div class="header-container">
-	<h1 class="title">christine's adventures</h1>
-	<img class="signature" src="signature.png" alt="signature">
-</div>
-<div class="img-container">
-	<div class="flip-card">
-		<div class="flipper">
-			<div class="front" id=2018_12_12_Hawaii.jpg>
-				<img class="main-image" src="photos/2018_12_12_Hawaii.jpg">
-			</div>
-			<div class="back" id=2018_12_12_Hawaii.jpg>
-				<img class="main-image" src="photos/2018_12_12_Hawaii.jpg">
-				<div class="back-description">
-					<h1>Hawaii</h1>
-					<h2>December 12, 2018</h2>
+    
+    <div class="header-container">
+        <h1 class="title">christine's adventures</h1>
+        <img class="signature" src="signature.png" alt="signature">    
+    </div>
+
+    <div class="tabbar">
+        <button onclick="openTab('travel')">travel</button>
+        <button onclick="openTab('art')">art</button>
+    </div>
+
+    <div id="travel" class="img-container">
+		<div class="flip-card">
+			<div class="flipper">
+				<div class="front" id=2018_12_12_Hawaii.jpg>
+					<img class="main-image" src="photos/2018_12_12_Hawaii.jpg">
+				</div>
+				<div class="back" id=2018_12_12_Hawaii.jpg>
+					<img class="main-image" src="photos/2018_12_12_Hawaii.jpg">
+					<div class="back-description">
+						<h1>Hawaii</h1>
+						<h2>December 12, 2018</h2>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="flip-card">
-		<div class="flipper">
-			<div class="front" id=2018_12_09_Guam.jpg>
-				<img class="main-image" src="photos/2018_12_09_Guam.jpg">
-			</div>
-			<div class="back" id=2018_12_09_Guam.jpg>
-				<img class="main-image" src="photos/2018_12_09_Guam.jpg">
-				<div class="back-description">
-					<h1>Guam</h1>
-					<h2>December 9, 2018</h2>
+		<div class="flip-card">
+			<div class="flipper">
+				<div class="front" id=2018_12_09_Guam.jpg>
+					<img class="main-image" src="photos/2018_12_09_Guam.jpg">
+				</div>
+				<div class="back" id=2018_12_09_Guam.jpg>
+					<img class="main-image" src="photos/2018_12_09_Guam.jpg">
+					<div class="back-description">
+						<h1>Guam</h1>
+						<h2>December 9, 2018</h2>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="flip-card">
-		<div class="flipper">
-			<div class="front" id=2018_11_30_Tokyo.jpg>
-				<img class="main-image" src="photos/2018_11_30_Tokyo.jpg">
-			</div>
-			<div class="back" id=2018_11_30_Tokyo.jpg>
-				<img class="main-image" src="photos/2018_11_30_Tokyo.jpg">
-				<div class="back-description">
-					<h1>Tokyo</h1>
-					<h2>November 30, 2018</h2>
+		<div class="flip-card">
+			<div class="flipper">
+				<div class="front" id=2018_11_30_Tokyo.jpg>
+					<img class="main-image" src="photos/2018_11_30_Tokyo.jpg">
+				</div>
+				<div class="back" id=2018_11_30_Tokyo.jpg>
+					<img class="main-image" src="photos/2018_11_30_Tokyo.jpg">
+					<div class="back-description">
+						<h1>Tokyo</h1>
+						<h2>November 30, 2018</h2>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="flip-card">
-		<div class="flipper">
-			<div class="front" id=2018_10_26_Cabo.jpg>
-				<img class="main-image" src="photos/2018_10_26_Cabo.jpg">
-			</div>
-			<div class="back" id=2018_10_26_Cabo.jpg>
-				<img class="main-image" src="photos/2018_10_26_Cabo.jpg">
-				<div class="back-description">
-					<h1>Cabo</h1>
-					<h2>October 26, 2018</h2>
+		<div class="flip-card">
+			<div class="flipper">
+				<div class="front" id=2018_10_26_Cabo.jpg>
+					<img class="main-image" src="photos/2018_10_26_Cabo.jpg">
+				</div>
+				<div class="back" id=2018_10_26_Cabo.jpg>
+					<img class="main-image" src="photos/2018_10_26_Cabo.jpg">
+					<div class="back-description">
+						<h1>Cabo</h1>
+						<h2>October 26, 2018</h2>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="flip-card">
-		<div class="flipper">
-			<div class="front" id=2018_08_26_SLO.jpg>
-				<img class="main-image" src="photos/2018_08_26_SLO.jpg">
-			</div>
-			<div class="back" id=2018_08_26_SLO.jpg>
-				<img class="main-image" src="photos/2018_08_26_SLO.jpg">
-				<div class="back-description">
-					<h1>SLO</h1>
-					<h2>August 26, 2018</h2>
+		<div class="flip-card">
+			<div class="flipper">
+				<div class="front" id=2018_08_26_SLO.jpg>
+					<img class="main-image" src="photos/2018_08_26_SLO.jpg">
+				</div>
+				<div class="back" id=2018_08_26_SLO.jpg>
+					<img class="main-image" src="photos/2018_08_26_SLO.jpg">
+					<div class="back-description">
+						<h1>SLO</h1>
+						<h2>August 26, 2018</h2>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="flip-card">
-		<div class="flipper">
-			<div class="front" id=2018_08_10_Vancouver.jpg>
-				<img class="main-image" src="photos/2018_08_10_Vancouver.jpg">
-			</div>
-			<div class="back" id=2018_08_10_Vancouver.jpg>
-				<img class="main-image" src="photos/2018_08_10_Vancouver.jpg">
-				<div class="back-description">
-					<h1>Vancouver</h1>
-					<h2>August 10, 2018</h2>
+		<div class="flip-card">
+			<div class="flipper">
+				<div class="front" id=2018_08_10_Vancouver.jpg>
+					<img class="main-image" src="photos/2018_08_10_Vancouver.jpg">
+				</div>
+				<div class="back" id=2018_08_10_Vancouver.jpg>
+					<img class="main-image" src="photos/2018_08_10_Vancouver.jpg">
+					<div class="back-description">
+						<h1>Vancouver</h1>
+						<h2>August 10, 2018</h2>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="flip-card">
-		<div class="flipper">
-			<div class="front" id=2018_07_01_Santorini.jpg>
-				<img class="main-image" src="photos/2018_07_01_Santorini.jpg">
-			</div>
-			<div class="back" id=2018_07_01_Santorini.jpg>
-				<img class="main-image" src="photos/2018_07_01_Santorini.jpg">
-				<div class="back-description">
-					<h1>Santorini</h1>
-					<h2>July 1, 2018</h2>
+		<div class="flip-card">
+			<div class="flipper">
+				<div class="front" id=2018_07_01_Santorini.jpg>
+					<img class="main-image" src="photos/2018_07_01_Santorini.jpg">
+				</div>
+				<div class="back" id=2018_07_01_Santorini.jpg>
+					<img class="main-image" src="photos/2018_07_01_Santorini.jpg">
+					<div class="back-description">
+						<h1>Santorini</h1>
+						<h2>July 1, 2018</h2>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</div>
-</body>
-</html>
+		<div class="flip-card">
+			<div class="flipper">
+				<div class="front" id=2018_06_27_Warsaw.jpg>
+					<img class="main-image" src="photos/2018_06_27_Warsaw.jpg">
+				</div>
+				<div class="back" id=2018_06_27_Warsaw.jpg>
+					<img class="main-image" src="photos/2018_06_27_Warsaw.jpg">
+					<div class="back-description">
+						<h1>Warsaw</h1>
+						<h2>June 27, 2018</h2>
+					</div>
+				</div>
+			</div>
+		</div></div><div id="art" class="img-container" style="display:none"></div>
+		<div class="flip-card">
+			<div class="flipper">
+				<div class="front" id=2019_01_09_Values.jpg>
+					<img class="main-image" src="art/2019_01_09_Values.jpg">
+				</div>
+				<div class="back" id=2019_01_09_Values.jpg>
+					<img class="main-image" src="art/2019_01_09_Values.jpg">
+					<div class="back-description">
+						<h1>Values</h1>
+						<h2>January 9, 2019</h2>
+					</div>
+				</div>
+			</div>
+		</div></div><div id="art" class="img-container" style="display:none"></div>
