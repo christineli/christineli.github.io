@@ -5,7 +5,8 @@ var months = ["January", "February", "March", "April", "May", "June",
 var fileName = 'index.html';
 var html = fs.readFileSync('template.html');
 
-function loadimages(folder) {
+function loadimages(folder, display) {
+    html = html + '<div id="' + folder.slice(0,-1) + '" class="img-container" style="display: ' + display + ';">'
     files = fs.readdirSync(folder);
     var length = files.length;
     for (i in files) {
@@ -18,20 +19,21 @@ function loadimages(folder) {
                 day = day[1];
             }
             title = file.split('_')[3].split('.')[0];
-            html = html + '\n\t\t<div class="flip-card">\n\t\t\t<div class="flipper">'
-            + '\n\t\t\t\t<div class="front" id=' + file + '>\n\t\t\t\t\t<img class="main-image" src="' + folder + file + '">\n\t\t\t\t</div>'
-            + '\n\t\t\t\t<div class="back" id=' + file + '>\n\t\t\t\t\t<img class="main-image" src="' + folder + file + '">'
-            + '\n\t\t\t\t\t<div class="back-description">\n\t\t\t\t\t\t<h1>' + title +'</h1>'
-            + '\n\t\t\t\t\t\t<h2>' + month + ' ' + day + ", " + year + '</h2>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>';        
+            html = html + '<div class="flip-card"><div class="flipper">'
+            + '<div class="front" id=' + file + '><img class="main-image" src="' + folder + file + '"></div>'
+            + '<div class="back" id=' + file + '><img class="main-image" src="' + folder + file + '">'
+            + '<div class="back-description"><h1>' + title +'</h1>'
+            + '<h2>' + month + ' ' + day + ", " + year + '</h2></div></div></div></div>';        
         }
     }
-    html = html + '</div><div id="art" class="img-container" style="display:none"></div>';
-    var stream = fs.createWriteStream(fileName);
-    stream.write(html);
-    stream.end();
+    html = html + '</div></div>';
 }
 
-loadimages('photos/');
-loadimages('art/');
+loadimages('travel/', 'block');
+loadimages('art/', 'none');
 
-html = html + '\n</body>\n</html>';
+html = html + '</body></html>';
+
+var stream = fs.createWriteStream(fileName);
+stream.write(html);
+stream.end();
