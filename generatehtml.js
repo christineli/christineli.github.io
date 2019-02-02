@@ -31,6 +31,7 @@ function loadimages(folder, display) {
 
 loadimages('travel/', 'block');
 loadimages('art/', 'none');
+loadimages('food/', 'none');
 
 html = html + '</body></html>';
 
